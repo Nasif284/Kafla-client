@@ -415,23 +415,9 @@ Client/src/
 
 ---
 
-## 5. Environment Variables & Setup Guide
+## 5.Setup Guide
 
-### 5.1. Environment Configuration
-
-Create a `.env.local` file in the `Client/` directory:
-
-```env
-# Backend API Base URLs
-NEXT_PUBLIC_API_URL=http://localhost:5001/api/v1
-NEXT_PUBLIC_API_BASE=http://localhost:5001
-
-# Google Cloud Platform Credentials
-NEXT_PUBLIC_GOOGLE_CLIENT_ID=your_google_oauth_client_id.apps.googleusercontent.com
-NEXT_PUBLIC_GOOGLE_PLACES_API_KEY=AIzaSyYourGoogleMapsAndPlacesApiKey
-```
-
-### 5.2. Installation & Development
+### 5.1. Installation & Development
 
 ```bash
 # Navigate to the Client directory
@@ -453,7 +439,7 @@ npm run build
 npm run start
 ```
 
-### 5.3. Available Scripts
+### 5.2. Available Scripts
 
 | Script | Purpose |
 | :--- | :--- |
