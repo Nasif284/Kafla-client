@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Megaphone, ArrowRight } from "lucide-react";
 import SourceOptions from "../components/SourceOptions";
 import { useSetSource } from "../hooks/onboarding.hooks";
+import Logo from "@/src/components/Logo";
 
 export default function ReferralSourcePage() {
   const router = useRouter();
@@ -34,9 +35,7 @@ export default function ReferralSourcePage() {
       <main className="w-full max-w-[600px] bg-white rounded-2xl p-5 sm:p-8 md:p-12 flex flex-col items-center shadow-sm z-10">
         <div className="mb-6 sm:mb-8 flex flex-col items-center w-full">
           <div className="mb-4 sm:mb-6">
-            <span className="font-headline text-xl font-black text-[#005440] tracking-tight">
-              Kafla
-            </span>
+            <Logo size={36} />
           </div>
 
           <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#c9eadb] rounded-full flex items-center justify-center mb-4 sm:mb-6">

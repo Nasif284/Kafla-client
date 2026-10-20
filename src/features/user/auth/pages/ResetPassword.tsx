@@ -6,6 +6,7 @@ import { Lock, Check, ArrowLeft } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import PasswordField from "../components/PasswordField";
+import Logo from "@/src/components/Logo";
 import { useResetPassword } from "@/src/features/user/auth/hooks/auth.hooks";
 import { ResetPasswordFormData, ResetPasswordSchema } from "../validators/reset-password.schema";
 
@@ -51,7 +52,7 @@ export default function ResetPasswordPage() {
       <main className="w-full max-w-[480px] bg-white rounded-2xl p-12 flex flex-col items-center shadow-sm z-10 relative">
         <div className="mb-8 flex flex-col items-center w-full">
           <div className="mb-6">
-            <span className="font-headline text-lg font-black text-[#005440] tracking-tight">Kafla</span>
+            <Logo size={32} />
           </div>
 
           <div className="w-14 h-14 bg-[#c9eadb] rounded-full flex items-center justify-center mb-6">

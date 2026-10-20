@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import {
-  Compass,
   Sparkles,
   Calendar,
   Receipt,
@@ -14,6 +13,7 @@ import {
   Car,
   Star,
 } from "lucide-react";
+import Logo from "@/src/components/Logo";
 
 const SCENES = [
   {
@@ -63,19 +63,7 @@ export default function AuthHero() {
 
       {/* ── Top Bar: Logo & Scene Switcher ── */}
       <div className="relative z-20 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#005440] to-[#0f6e56] border border-white/25 flex items-center justify-center text-white shadow-lg shadow-black/20">
-            <Compass className="w-6 h-6 text-white" />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-2xl font-black text-white tracking-tight font-headline drop-shadow-sm leading-none">
-              Kafla
-            </span>
-            <span className="text-[11px] font-bold text-emerald-300 uppercase tracking-widest mt-1">
-              Group Travel Workspace
-            </span>
-          </div>
-        </div>
+        <Logo size={44} tone="inverse" tagline="Group Travel Workspace" className="drop-shadow-sm" />
 
         {/* Scene Toggle Button */}
         <button

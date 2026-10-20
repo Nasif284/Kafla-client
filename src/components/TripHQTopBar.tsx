@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
-import { Compass, LogOut, Users, ChevronDown } from "lucide-react";
+import { LogOut, Users, ChevronDown } from "lucide-react";
 import { useAuthStore } from "@/src/store/auth.store";
 import { useLogout } from "@/src/features/user/auth/hooks/auth.hooks";
 import Avatar from "@/src/components/Avatar";
+import Logo from "@/src/components/Logo";
 
 export default function TripHQTopBar() {
   const pathname = usePathname();
@@ -42,18 +43,8 @@ export default function TripHQTopBar() {
   return (
     <header className="fixed top-0 left-0 right-0 h-16 bg-white/95 backdrop-blur-md z-40 px-4 sm:px-8 flex justify-between items-center border-b border-[#bec9c3]/20 shadow-xs">
       {/* ── Left: Logo & Brand ── */}
-      <Link href="/trips/groups" className="flex items-center gap-3 group">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#005440] to-[#0f6e56] flex items-center justify-center text-white shadow-sm shadow-[#005440]/25 group-hover:scale-105 transition-transform">
-          <Compass className="w-5 h-5 text-white" />
-        </div>
-        <div className="flex flex-col">
-          <span className="font-extrabold text-xl text-[#181d1a] tracking-tight font-headline group-hover:text-[#005440] transition-colors leading-none">
-            Kafla
-          </span>
-          <span className="text-[10px] font-bold text-[#0f6e56] uppercase tracking-wider hidden sm:block mt-1">
-            Group Travel
-          </span>
-        </div>
+      <Link href="/trips/groups" className="flex items-center group">
+        <Logo size={36} tagline="Group Travel" className="group-hover:opacity-90 transition-opacity" />
       </Link>
 
       {/* ── Right: Profile Menu with Logout ── */}

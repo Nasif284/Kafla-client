@@ -2,6 +2,7 @@ import AuthHero from "@/src/features/user/auth/components/AuthHero";
 import AuthTabs from "@/src/features/user/auth/components/AuthTabs";
 import GoogleAuth from "@/src/features/user/auth/components/GoogleAuth";
 import AuthFooter from "@/src/features/user/auth/components/AuthFooter";
+import Logo from "@/src/components/Logo";
 
 export default function AuthPage({
   children,
@@ -15,7 +16,7 @@ export default function AuthPage({
         <div className="w-full max-w-md my-auto py-6">
           {/* Mobile Header branding */}
           <div className="lg:hidden text-center mb-8">
-            <h1 className="text-3xl font-black text-[#0f6e56] font-headline tracking-tight">Kafla</h1>
+            <Logo size={40} className="justify-center" />
             <p className="text-sm text-[#3f4944] mt-1 font-medium">Coordinate trips with your tribe</p>
           </div>
 

@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, KeyboardEvent, ClipboardEvent, ChangeEvent
 import Link from "next/link";
 import { Mail } from "lucide-react";
 import { OTPVerificationCardProps } from "../interfaces/auth.interfaces";
+import Logo from "@/src/components/Logo";
 
 const OTP_LENGTH = 6;
 const RESEND_SECONDS = 48;
@@ -92,7 +93,7 @@ export default function OTPVerificationCard({ email, onVerify, onResend }: OTPVe
       <main className="flex-grow flex items-center justify-center p-4 sm:p-6">
         <div className="w-full max-w-[480px] bg-white rounded-2xl p-5 sm:p-8 md:p-10 flex flex-col items-center shadow-sm">
           <div className="mb-6 sm:mb-8">
-            <span className="font-headline font-black text-[#0F6E56] text-2xl tracking-tight">Kafla</span>
+            <Logo size={36} />
           </div>
 
           <div className="mb-6 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#c9eadb] flex items-center justify-center">

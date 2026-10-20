@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Compass, ArrowRight, Menu, X, LayoutDashboard } from "lucide-react";
+import { ArrowRight, Menu, X, LayoutDashboard } from "lucide-react";
 import { useAuthStore } from "@/src/store/auth.store";
+import Logo from "@/src/components/Logo";
 
 export const LandingNavbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,18 +29,8 @@ export const LandingNavbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-10 h-10 rounded-2xl bg-[#005440] flex items-center justify-center text-white shadow-md shadow-[#005440]/15 group-hover:scale-105 transition-transform duration-200">
-            <Compass className="w-5 h-5 text-[#a0f3d4]" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-heading font-black text-2xl tracking-tight text-[#181d1a]">
-              Kafla
-            </span>
-            <span className="text-[10px] tracking-wider uppercase font-bold text-[#476459] -mt-1">
-              Group Travel Hub
-            </span>
-          </div>
+        <Link href="/" className="flex items-center group">
+          <Logo size={40} tagline="Group Travel Hub" className="group-hover:opacity-90 transition-opacity" />
         </Link>
 
         {/* Desktop Nav Links */}

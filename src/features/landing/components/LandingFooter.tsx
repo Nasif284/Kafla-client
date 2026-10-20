@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Compass } from "lucide-react";
+import Logo from "@/src/components/Logo";
 
 export const LandingFooter: React.FC = () => {
   return (
@@ -9,13 +9,8 @@ export const LandingFooter: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand info */}
           <div className="md:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-2xl bg-[#005440] flex items-center justify-center text-white shadow-xs">
-                <Compass className="w-5 h-5 text-[#a0f3d4]" />
-              </div>
-              <span className="font-heading font-black text-2xl tracking-tight text-[#181d1a]">
-                Kafla
-              </span>
+            <Link href="/" className="inline-flex items-center">
+              <Logo size={36} />
             </Link>
             <p className="text-sm text-[#5a6460] max-w-sm leading-relaxed">
               The collaborative group travel app. Coordinate day-by-day itineraries,

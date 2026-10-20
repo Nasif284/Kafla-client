@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Lock, ArrowLeft } from "lucide-react";
 import ForgotPasswordForm from "../components/ForgotPasswordForm";
+import Logo from "@/src/components/Logo";
 
 export default function ForgotPasswordPage() {
   return (
@@ -10,7 +11,7 @@ export default function ForgotPasswordPage() {
       <main className="w-full max-w-[480px] bg-white rounded-2xl p-12 flex flex-col items-center shadow-sm z-10 relative">
         <div className="mb-8 flex flex-col items-center w-full">
           <div className="mb-6">
-            <span className="font-headline text-lg font-black text-[#005440] tracking-tight">Kafla</span>
+            <Logo size={32} />
           </div>
 
           <div className="w-14 h-14 bg-[#c9eadb] rounded-full flex items-center justify-center mb-6">
